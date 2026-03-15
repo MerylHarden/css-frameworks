@@ -1,19 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="screen.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot Sauce Button Styles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              chili: "#C2410C",
+              paprika: "#EA580C",
+              crema: "#FFF7ED",
+              cacao: "#2F241F",
+              herb: "#3F6B3F",
+            },
+            fontFamily: {
+              display: ["Arial Black", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            boxShadow: {
+              spicy: "0 8px 20px rgba(194, 65, 12, 0.28)",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <h1>Home</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-    <script src="index.js"></script>
+  <body class="bg-orange-50 min-h-screen font-body text-cacao">
+    <main class="max-w-5xl mx-auto px-6 py-16">
+      <div class="mb-12">
+        <p class="uppercase tracking-[0.2em] text-sm text-chili font-semibold mb-3">
+          Button Design Exploration
+        </p>
+        <h1 class="text-4xl md:text-6xl font-black leading-tight max-w-4xl">
+          Two button styles for a hot sauce brand in Peru
+        </h1>
+        <p class="mt-4 text-lg text-stone-700 max-w-2xl">
+          Designed to feel bold, flavorful, handcrafted, and modern.
+        </p>
+      </div>
+
+      <section class="grid md:grid-cols-2 gap-8">
+        <!-- Primary Button Card -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg border border-orange-100">
+          <h2 class="text-2xl font-bold mb-3">Style 1: Primary CTA</h2>
+          <p class="text-stone-600 mb-6">
+            A bold call-to-action for shopping, ordering, or exploring products.
+          </p>
+
+          <button
+            class="inline-flex items-center gap-3 rounded-full bg-chili px-7 py-4 text-crema font-bold text-lg shadow-spicy transition duration-200 hover:bg-paprika hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-orange-200"
+          >
+            Shop the Heat
+            <span class="text-xl">🌶️</span>
+          </button>
+
+          <div class="mt-6 text-sm text-stone-500">
+            Uses warm spice tones to communicate intensity and flavor.
+          </div>
+        </div>
+
+        <!-- Secondary Button Card -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg border border-orange-100">
+          <h2 class="text-2xl font-bold mb-3">Style 2: Secondary CTA</h2>
+          <p class="text-stone-600 mb-6">
+            A softer supporting button for brand story, ingredients, or recipes.
+          </p>
+
+          <button
+            class="inline-flex items-center gap-3 rounded-full border-2 border-herb bg-crema px-7 py-4 text-herb font-bold text-lg transition duration-200 hover:bg-herb hover:text-white focus:outline-none focus:ring-4 focus:ring-green-200"
+          >
+            Explore Ingredients
+            <span class="text-xl">→</span>
+          </button>
+
+          <div class="mt-6 text-sm text-stone-500">
+            Balances the fiery primary button with an earthy, fresh visual tone.
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-14 bg-white rounded-3xl p-8 shadow-lg border border-orange-100">
+        <h2 class="text-2xl font-bold mb-4">Buttons in Context</h2>
+        <div class="bg-gradient-to-r from-orange-100 to-red-100 rounded-3xl p-10">
+          <p class="uppercase text-sm tracking-[0.18em] text-chili font-semibold mb-4">
+            Aji Roja del Perú
+          </p>
+          <h3 class="text-3xl md:text-5xl font-black max-w-2xl leading-tight mb-8">
+            Crafted heat inspired by Peruvian flavor.
+          </h3>
+
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="inline-flex items-center gap-3 rounded-full bg-chili px-7 py-4 text-crema font-bold text-lg shadow-spicy transition duration-200 hover:bg-paprika"
+            >
+              Buy Now 🌶️
+            </button>
+
+            <button
+              class="inline-flex items-center gap-3 rounded-full border-2 border-cacao bg-white/70 px-7 py-4 text-cacao font-bold text-lg transition duration-200 hover:bg-cacao hover:text-white"
+            >
+              Our Story
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
